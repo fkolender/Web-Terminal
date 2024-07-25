@@ -6,10 +6,8 @@
     <title>Console Style Page</title>
     <link rel = "stylesheet" href = "../phpBlog/assets/css/style.css">
 </head>
+<?php include 'includes/header.php'; ?>
 <body>
-    <header>
-        <h1>fkolender/</h1>
-    </header>
     <div class = "content">
         <h1>./phpBlog</h1>
         <pre><code>
@@ -18,13 +16,10 @@
         Establishing DB connection — 100%
         > echo "A fierce wind blew from the south."
         A fierce wind blew from the south.
-        > <span class="cursor">|</span>
+        > <span class = "cursor">|</span>
 
 </code></pre>
-
     </div>
-    <footer>
-        &copy; 2024 fkolender
-    </footer>
 </body>
+<?php include 'includes/footer.php'; ?>
 </html>
