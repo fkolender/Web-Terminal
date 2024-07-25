@@ -1,0 +1,59 @@
+/* style.css */
+body {
+    background-color: black;
+    color: #00ff00; /* Neon green text */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Adjusted for better readability */
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #00ff00;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.content {
+    padding: 20px;
+}
+
+pre {
+    background-color: black;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    overflow: auto;
+    white-space: pre-wrap; /* Wraps text to fit the container */
+    font-size: 14px; /* Smaller font size for a more authentic feel */
+}
+
+code {
+    display: block;
+}
+
+.cursor {
+    color: #00ff00;
+    background-color: #00ff00; /* Added background color for better visibility */
+    width: 1em; /* Increased width for a bolder appearance */
+    height: 1.2em; /* Slightly taller than the text */
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #00ff00;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

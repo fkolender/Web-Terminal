@@ -1,6 +1,30 @@
-<?php include 'includes/header.php'; ?>
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name    = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Console Style Page</title>
+    <link rel = "stylesheet" href = "../phpBlog/assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>fkolender/</h1>
+    </header>
+    <div class = "content">
+        <h1>./phpBlog</h1>
+        <pre><code>
+        > Initializing system...
+        Loading core module Athena — 100% secured divine wisdom.
+        Establishing DB connection — 100%
+        > echo "A fierce wind blew from the south."
+        A fierce wind blew from the south.
+        > <span class="cursor">|</span>
 
-<h1>Lorem ipsum</h1>
-<p>Lorem ipsum odor amet, consectetuer adipiscing elit. Tellus conubia hendrerit egestas nec bibendum amet felis. Interdum risus malesuada euismod eleifend hac. Pulvinar natoque enim felis aliquet urna. Consectetur magna est sollicitudin dapibus commodo ultrices sapien. Posuere elementum faucibus blandit aliquet tempus volutpat eros.</p>
+</code></pre>
 
-<?php include 'includes/footer.php'; ?>
+    </div>
+    <footer>
+        &copy; 2024 fkolender
+    </footer>
+</body>
+</html>
