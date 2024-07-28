@@ -1,6 +1,6 @@
 # Terminal Web Emulator
 
-Welcome to the **Terminal Web Emulator**—a simple PHP project I created for practice. It features a 'retro terminal' aesthetic with functional input/output. It's currently limited to a couple of basic commands and is very much a work in progress.
+Welcome to the **Terminal Web Emulator** — a simple PHP project I created for practice. It features a 'retro terminal' aesthetic with functional input/output. It's currently limited to a couple of basic commands and is very much a work in progress.
 
 ![Terminal Screenshot](https://github.com/user-attachments/assets/d348b8aa-4d0f-4bf3-a13e-b383b009fadd)
 
