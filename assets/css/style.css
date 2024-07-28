@@ -8,7 +8,9 @@ body {
 header {
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #00ff00;
+    border-bottom: 1px solid #00ff00; /* Green border at the bottom */
+    background-color: #111; /* Dark gray background */
+    margin-bottom: 20px; /* Space below the header */
 }
 
 h1 {
@@ -92,4 +94,92 @@ nav ul li a:hover {
 
 .content a:hover {
     text-decoration: underline !important;
+}
+
+/* General Form Styles */
+form {
+    background-color: #111; /* Dark gray background for the form */
+    border: 1px solid #00ff00; /* Green border for form */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Soft green glow */
+}
+
+/* Label Styles */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #00ff00; /* Green text for labels */
+    font-size: 1.1em; /* Slightly larger font size */
+}
+
+/* Input Styles */
+form input[type="text"], 
+form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333; /* Dark gray border for inputs */
+    background-color: #222; /* Slightly lighter black background */
+    color: #00ff00; /* Green text */
+    font-family: monospace;
+    border-radius: 3px; /* Rounded corners for inputs */
+    box-sizing: border-box; /* Includes padding and border in width */
+}
+
+/* Button Styles */
+form button {
+    background-color: #00ff00; /* Green background for button */
+    color: black; /* Black text */
+    border: none;
+    padding: 10px;
+    font-family: monospace;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 3px; /* Rounded corners for button */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+form button:hover {
+    background-color: #00cc00; /* Slightly darker green on hover */
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.7); /* Green glow on hover */
+}
+
+/* Placeholder Styles */
+form input::placeholder {
+    color: #666; /* Gray color for placeholder text */
+}
+
+/* Content Styles */
+.content {
+    padding: 20px;
+    max-width: 800px; /* Limit the width for better readability */
+    margin: auto;
+    background-color: #111; /* Dark background for the content area */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    border: 1px solid #00ff00; /* Green border for consistency */
+}
+
+/* Heading Styles */
+h2 {
+    color: #00ff00; /* Green color for headings */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Message Styles */
+.error {
+    color: red; /* Red color for error messages */
+    background-color: #222; /* Dark background for error messages */
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+.success {
+    color: #00ff00; /* Green color for success messages */
+    background-color: #222; /* Dark background for success messages */
+    padding: 10px;
+    border: 1px solid #00ff00;
+    border-radius: 4px;
 }

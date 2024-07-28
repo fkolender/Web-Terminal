@@ -1,33 +1,5 @@
-<?php
-session_start();
-include 'db.php';
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    
-    $stmt = $conn->prepare("SELECT id, password FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->store_result();
-    
-    if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $hashed_password);
-        $stmt->fetch();
-        
-        if (password_verify($password, $hashed_password)) {
-            $_SESSION['user_id'] = $id;
-            header("Location: index.php");
-            exit();
-        } else {
-            echo "Invalid username or password.";
-        }
-    } else {
-        echo "Invalid username or password.";
-    }
-    
-    $stmt->close();
-}
+<?php 
+include 'includes/db.php'; // Establish database connection
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +8,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h2>Login</h2>
-    <form method="post" action="">
-        <label for="username">Username:</label>
-        <input type="text" name
+    <?php include 'includes/header.php'; ?>
+    <div class="content">
+        <h2>Login</h2>
+        <form action="login_action.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <?php include 'includes/footer.php'; ?>
+</body>
+</html>
