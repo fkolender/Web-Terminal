@@ -1,5 +1,5 @@
 # Terminal Web Emulator
-Welcome to the **Terminal Web Emulator** a PHP-powered application that features a cheesy 'retro terminal' aesthetic with functional input / output. Currently limited to two commands.
+Welcome to the **Terminal Web Emulator** a PHP-powered application that features a cheesy 'retro terminal' aesthetic with functional input / output. Currently limited to two commands (WIP).
 ![image](https://github.com/user-attachments/assets/d348b8aa-4d0f-4bf3-a13e-b383b009fadd)
 
 ## Features
