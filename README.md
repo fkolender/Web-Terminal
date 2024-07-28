@@ -1,7 +1,13 @@
-“Terminal Emulator Web App ========================= Welcome to the Terminal Emulator Web App! This project is a retro-style terminal interface implemented in PHP, designed to mimic a classic command-line experience within a web environment.”
+# Terminal Web Emulator
+Welcome to the **Terminal Web Emulator** a PHP-powered application that features a cheesy 'retro terminal' aesthetic with functional input / output. Currently limited to two commands.
 
-“Features -------- * **Command Line Interface**: Type and execute commands like `echo` to display text or `clear` to reset the terminal output. * **User Authentication**: Access the terminal functionalities only if logged in.”
+## Features
 
-“Roadmap ------- * **User Profile Management**: Adding user profiles and customizable settings. * **Advanced Command Set**: Expanding available commands and functionalities. * **Enhanced Security**: Implementing more robust security measures and input validation.”
+- **Terminal Retro Aesthetic**: Dive into a classic terminal look with **green text** on a **black background**.
+- **Interactive Commands**: Utilize simple commands like `echo` to display text and `clear` to reset the terminal.
+- **Session Management**: Commands are accessible only when logged in, adding an interactive layer to your experience.
 
+**Clone the Repository**:
 
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
