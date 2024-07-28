@@ -1,9 +1,31 @@
-# Terminal Web Emulator
-Welcome to the **Terminal Web Emulator** a PHP-powered application that features a cheesy 'retro terminal' aesthetic with functional input / output. Currently limited to two commands (WIP).
-![image](https://github.com/user-attachments/assets/d348b8aa-4d0f-4bf3-a13e-b383b009fadd)
+# 🖥️ Terminal Web Emulator
 
-## Features
+Welcome to the **Terminal Web Emulator**—a simple PHP project I created to practice PHP. It features a 'retro terminal' aesthetic with functional input/output. It's currently limited to a couple of basic commands and is very much a work in progress.
 
-- **Terminal Retro Aesthetic**: Dive into a classic terminal look with **green text** on a **black background**.
-- **Interactive Commands**: Utilize simple commands like `echo` to display text and `clear` to reset the terminal.
-- **Session Management**: Commands are accessible only when logged in, adding an interactive layer to your experience.
+![Terminal Screenshot](https://github.com/user-attachments/assets/d348b8aa-4d0f-4bf3-a13e-b383b009fadd)
+
+## ⚙️ Features
+
+- **Retro Terminal Aesthetic**: Enjoy a classic terminal look with green text on a black background.
+- **Interactive Commands**: Use simple commands like `echo` to display text and `clear` to reset the terminal.
+- **🔒 Session Management**: Commands are accessible only when logged in.
+
+## 📸 Screenshots
+
+![Terminal Web Emulator](https://github.com/user-attachments/assets/d348b8aa-4d0f-4bf3-a13e-b383b009fadd)
+
+## 🚀 Getting Started
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+- 🐘 PHP
+- 🗄️ MySQL
+- 🔧 XAMPP or any local server environment
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
