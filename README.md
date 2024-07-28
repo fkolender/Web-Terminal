@@ -1,6 +1,6 @@
-# 🖥️ Terminal Web Emulator
+# Terminal Web Emulator
 
-Welcome to the **Terminal Web Emulator**—a simple PHP project I created to practice PHP. It features a 'retro terminal' aesthetic with functional input/output. It's currently limited to a couple of basic commands and is very much a work in progress.
+Welcome to the **Terminal Web Emulator**—a simple PHP project I created for practice. It features a 'retro terminal' aesthetic with functional input/output. It's currently limited to a couple of basic commands and is very much a work in progress.
 
 ![Terminal Screenshot](https://github.com/user-attachments/assets/d348b8aa-4d0f-4bf3-a13e-b383b009fadd)
 
@@ -9,12 +9,6 @@ Welcome to the **Terminal Web Emulator**—a simple PHP project I created to pra
 - **Retro Terminal Aesthetic**: Enjoy a classic terminal look with green text on a black background.
 - **Interactive Commands**: Use simple commands like `echo` to display text and `clear` to reset the terminal.
 - **🔒 Session Management**: Commands are accessible only when logged in.
-
-## 📸 Screenshots
-
-![Terminal Web Emulator](https://github.com/user-attachments/assets/d348b8aa-4d0f-4bf3-a13e-b383b009fadd)
-
-## 🚀 Getting Started
 
 To get a local copy up and running, follow these steps.
 
