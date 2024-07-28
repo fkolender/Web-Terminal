@@ -10,14 +10,20 @@ if (!isset($_SESSION['terminal_output'])) {
     $_SESSION['terminal_output'] = "";
 }
 
-// Process command input
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+// Check if user is logged in
+$isLoggedIn = isset($_SESSION['username']) && !empty($_SESSION['username']);
+
+// Process command input only if user is logged in
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && $isLoggedIn) {
     $command = trim($_POST['command']);
     $output = "";
 
     if (strpos($command, 'echo ') === 0) {
         $textToEcho = substr($command, 5); // Get the text after 'echo '
         $output = htmlspecialchars($textToEcho);
+    } elseif ($command === 'clear') {
+        $output = ""; // Clear the terminal output
+        $_SESSION['terminal_output'] = ""; // Clear the stored output
     } else {
         $output = "Unknown command: $command";
     }
@@ -49,11 +55,26 @@ $terminalOutput = $welcomeMessage . $_SESSION['terminal_output'];
 Loading core module Athena — 100% secured divine wisdom.
 Establishing DB connection — 100%
 <?php echo $terminalOutput; ?>
-</pre>
+            </pre>
 
-            <form method="post">
-                <input type="text" name="command" class="console-input" placeholder="Type your command here..." autofocus required>
-            </form>
+            <?php if ($isLoggedIn): ?>
+                <div class="console-input-container">
+                    <form class="console-form" method="post">
+                        <input type="text" name="command" class="console-input" placeholder="Type your command here..." autofocus required>
+                    </form>
+                </div>
+            <?php else: ?>
+                <p class="login-required">You must be logged in to enter commands.</p>
+            <?php endif; ?>
+        </div>
+
+        <div class="help-container">
+            <h2>Available Commands</h2>
+            <div class="help-text">
+                <p>Command Reference:</p>
+                <pre><code>echo [text] — Displays the specified text.</code></pre>
+                <pre><code>clear — Clears the terminal output.</code></pre>
+            </div>
         </div>
     </div>
     <?php include 'includes/footer.php'; ?>
