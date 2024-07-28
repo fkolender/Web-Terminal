@@ -18,8 +18,6 @@ To get a local copy up and running, follow these steps.
 - 🗄️ MySQL
 - 🔧 XAMPP or any local server environment
 
-### Installation
-
-1. Clone the repo
+Clone the repo
    ```sh
    git clone https://github.com/fkolender/Web-Terminal.git
