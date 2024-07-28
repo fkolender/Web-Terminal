@@ -16,10 +16,22 @@
         Establishing DB connection — 100%
         > echo "A fierce wind blew from the south."
         A fierce wind blew from the south.
+        <?php
+            $username = "User";  // You can dynamically get this from a database or a session
+            echo "> Welcome, $username!";?><br>
         > <span class = "cursor">|</span>
 
 </code></pre>
-    </div>
+<nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/logout">Logout</a></li>
+                <li><a href="/signup">Signup</a></li>
+                <li><a href="/test_connection">Test Connection</a></li>
+            </ul>
+        </nav>
+</div>
 </body>
 <?php include 'includes/footer.php'; ?>
 </html>
