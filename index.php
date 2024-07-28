@@ -10,6 +10,11 @@ if (!isset($_SESSION['terminal_output'])) {
     $_SESSION['terminal_output'] = "";
 }
 
+// Initialize loading animation flag if not set
+if (!isset($_SESSION['animations_shown'])) {
+    $_SESSION['animations_shown'] = false;
+}
+
 // Check if user is logged in
 $isLoggedIn = isset($_SESSION['username']) && !empty($_SESSION['username']);
 
@@ -52,11 +57,12 @@ $terminalOutput = $welcomeMessage . $_SESSION['terminal_output'];
         <div class="console-container">
             <pre class="console-output">
 > Initializing system...
-Loading core module Athena — 100% secured divine wisdom.
-Establishing DB connection — 100%
+<div id="loading-message">Loading core module Athena — 100%</div>
+<div id="loading-progress-core"></div>
+<div id="db-message">Establishing DB connection — 100%</div>
+<div id="loading-progress-db"></div>
 <?php echo $terminalOutput; ?>
             </pre>
-
             <?php if ($isLoggedIn): ?>
                 <div class="console-input-container">
                     <form class="console-form" method="post">
@@ -64,7 +70,7 @@ Establishing DB connection — 100%
                     </form>
                 </div>
             <?php else: ?>
-                <p class="login-required">You must be logged in to enter commands.</p>
+                <p class="login-required">You must be logged in to enter commands!</p>
             <?php endif; ?>
         </div>
 
@@ -78,5 +84,50 @@ Establishing DB connection — 100%
         </div>
     </div>
     <?php include 'includes/footer.php'; ?>
+    <!-- JavaScript to handle loading message animation -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Check if animations have already been shown
+        if (sessionStorage.getItem('animationsShown') !== 'true') {
+            // Handle the loading progress animation for core module
+            const coreMessage = document.getElementById('loading-message');
+            const coreProgress = document.getElementById('loading-progress-core');
+            const dbMessage = document.getElementById('db-message');
+            const dbProgress = document.getElementById('loading-progress-db');
+
+            // Fake progress for core module
+            coreMessage.classList.remove('hidden');
+            let coreWidth = 0;
+            const coreInterval = setInterval(() => {
+                if (coreWidth >= 100) {
+                    clearInterval(coreInterval);
+                    coreMessage.classList.add('hidden');
+                } else {
+                    coreWidth += 2; // Increment progress
+                    coreProgress.style.width = coreWidth + '%';
+                }
+            }, 35); // Adjust speed
+
+            // Fake progress for DB connection
+            setTimeout(() => {
+                dbMessage.classList.remove('hidden');
+                let dbWidth = 0;
+                const dbInterval = setInterval(() => {
+                    if (dbWidth >= 100) {
+                        clearInterval(dbInterval);
+                        dbMessage.classList.add('hidden');
+                        dbProgress.classList.add('hidden');
+                        sessionStorage.setItem('animationsShown', 'true');
+                    } else {
+                        dbWidth += 2; // Increment progress
+                        dbProgress.style.width = dbWidth + '%';
+                    }
+                }, 25); // Adjust speed
+            }, 250); // Start after core module progress
+        }
+    });
+</script>
+
+
 </body>
 </html>
